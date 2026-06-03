@@ -13,7 +13,7 @@ Set these in Vercel before deploying:
 
 Use the Supabase service role key only inside Vercel environment variables. Do not put it in browser JavaScript.
 
-`WEBSITE_PASSWORD` protects the entire website with a browser password prompt before any page, API route, script, stylesheet, or image is served. The username defaults to `guest`. To use a different username, also set `WEBSITE_USERNAME`.
+`WEBSITE_PASSWORD` protects the website behind a themed password page at `/login`. Guests only need the password; there is no username. The login page sets a private access cookie after the password is accepted.
 
 ## Supabase table
 

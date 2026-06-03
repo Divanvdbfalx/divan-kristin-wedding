@@ -27,7 +27,10 @@
         <form class="admin-login">
           <label>
             Admin password
-            <input type="password" name="password" autocomplete="current-password" required>
+            <span class="password-field">
+              <input id="admin-password" type="password" name="password" autocomplete="current-password" required>
+              <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle data-target="admin-password">Show</button>
+            </span>
           </label>
           <button class="pill-button" type="submit">Load RSVPs</button>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -73,6 +76,16 @@
       const summary = document.querySelector(".admin-summary");
       const tableWrap = document.querySelector(".admin-table-wrap");
       const tableBody = document.querySelector(".admin-table tbody");
+      const passwordToggle = document.querySelector("[data-password-toggle]");
+      const passwordInput = document.getElementById(passwordToggle.dataset.target);
+
+      passwordToggle.addEventListener("click", () => {
+        const isVisible = passwordInput.type === "text";
+        passwordInput.type = isVisible ? "password" : "text";
+        passwordToggle.textContent = isVisible ? "Show" : "Hide";
+        passwordToggle.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+        passwordToggle.setAttribute("aria-pressed", String(!isVisible));
+      });
 
       const formatDate = (value) => {
         if (!value) return "";

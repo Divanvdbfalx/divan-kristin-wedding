@@ -23,7 +23,10 @@
           <input type="hidden" name="next" value="/">
           <label>
             Password
-            <input type="password" name="password" autocomplete="current-password" required autofocus>
+            <span class="password-field">
+              <input id="main-password" type="password" name="password" autocomplete="current-password" required autofocus>
+              <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle data-target="main-password">Show</button>
+            </span>
           </label>
           <button class="pill-button" type="submit">Enter Website</button>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -36,8 +39,18 @@
       const statusText = loginForm.querySelector(".form-status");
       const nextInput = loginForm.querySelector('input[name="next"]');
       const params = new URLSearchParams(window.location.search);
+      const passwordToggle = document.querySelector("[data-password-toggle]");
+      const passwordInput = document.getElementById(passwordToggle.dataset.target);
 
       nextInput.value = params.get("next") || "/";
+
+      passwordToggle.addEventListener("click", () => {
+        const isVisible = passwordInput.type === "text";
+        passwordInput.type = isVisible ? "password" : "text";
+        passwordToggle.textContent = isVisible ? "Show" : "Hide";
+        passwordToggle.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+        passwordToggle.setAttribute("aria-pressed", String(!isVisible));
+      });
 
       loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();

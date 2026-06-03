@@ -1,16 +1,20 @@
 # RSVP storage setup
 
-The RSVP form posts to `/api/rsvp`. Submissions are stored in a Redis-compatible REST database and can be viewed at `/admin`.
+The RSVP form posts to `/api/rsvp`. Submissions are stored in Supabase and can be viewed at `/admin`.
 
 ## Required environment variables
 
 Set these in Vercel before deploying:
 
-- `KV_REST_API_URL` or `UPSTASH_REDIS_REST_URL`
-- `KV_REST_API_TOKEN` or `UPSTASH_REDIS_REST_TOKEN`
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
 - `RSVP_ADMIN_PASSWORD`
 
-Vercel KV/Redis and Upstash Redis both provide the REST URL and token values.
+Use the Supabase service role key only inside Vercel environment variables. Do not put it in browser JavaScript.
+
+## Supabase table
+
+Run the SQL in `supabase-rsvp-schema.sql` in the Supabase SQL editor before using the form.
 
 ## Admin view
 

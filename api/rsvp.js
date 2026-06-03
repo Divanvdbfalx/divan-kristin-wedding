@@ -1,10 +1,10 @@
 const { randomUUID } = require("crypto");
 
-const STORE_KEY = "wedding:rsvps";
+const TABLE_NAME = "rsvp_submissions";
 
-const getStoreConfig = () => ({
-  url: process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL,
-  token: process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN,
+const getSupabaseConfig = () => ({
+  url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  key: process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY,
 });
 
 const sendJson = (res, statusCode, body) => {
@@ -29,23 +29,26 @@ const cleanText = (value, maxLength = 1000) =>
     .slice(0, maxLength);
 
 const saveSubmission = async (record) => {
-  const { url, token } = getStoreConfig();
+  const { url, key } = getSupabaseConfig();
 
-  if (!url || !token) {
-    throw new Error("Missing RSVP storage environment variables.");
+  if (!url || !key) {
+    throw new Error("Missing Supabase environment variables.");
   }
 
-  const response = await fetch(url, {
+  const response = await fetch(`${url}/rest/v1/${TABLE_NAME}`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${token}`,
+      apikey: key,
+      Authorization: `Bearer ${key}`,
       "Content-Type": "application/json",
+      Prefer: "return=representation",
     },
-    body: JSON.stringify(["LPUSH", STORE_KEY, JSON.stringify(record)]),
+    body: JSON.stringify(record),
   });
 
   if (!response.ok) {
-    throw new Error(`Storage request failed with ${response.status}.`);
+    const message = await response.text();
+    throw new Error(`Supabase insert failed with ${response.status}: ${message}`);
   }
 };
 
@@ -63,14 +66,14 @@ module.exports = async (req, res) => {
 
     const record = {
       id: randomUUID(),
-      submittedAt: new Date().toISOString(),
+      submitted_at: new Date().toISOString(),
       name: cleanText(body.name, 120),
       attending: cleanText(body.attending, 40),
       meal: cleanText(body.meal, 80),
       dietary: cleanText(body.dietary, 1000),
       contact: cleanText(body.contact, 160),
       message: cleanText(body.message, 1500),
-      userAgent: cleanText(req.headers["user-agent"], 300),
+      user_agent: cleanText(req.headers["user-agent"], 300),
     };
 
     if (!record.name || !record.contact || !record.attending) {

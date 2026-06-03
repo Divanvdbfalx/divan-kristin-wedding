@@ -6,11 +6,14 @@ The RSVP form posts to `/api/rsvp`. Submissions are stored in Supabase and can b
 
 Set these in Vercel before deploying:
 
+- `WEBSITE_PASSWORD`
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `RSVP_ADMIN_PASSWORD`
 
 Use the Supabase service role key only inside Vercel environment variables. Do not put it in browser JavaScript.
+
+`WEBSITE_PASSWORD` protects the entire website with a browser password prompt before any page, API route, script, stylesheet, or image is served. The username defaults to `guest`. To use a different username, also set `WEBSITE_USERNAME`.
 
 ## Supabase table
 

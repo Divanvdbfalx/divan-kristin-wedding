@@ -616,13 +616,13 @@ h3 {
 }
 
 .feature-row.media-left .feature-media.faded img {
-  -webkit-mask-image: linear-gradient(to right, #000 40%, transparent 97%);
-          mask-image: linear-gradient(to right, #000 40%, transparent 97%);
+  -webkit-mask-image: linear-gradient(to right, #000 72%, transparent 100%);
+          mask-image: linear-gradient(to right, #000 72%, transparent 100%);
 }
 
 .feature-row.media-right .feature-media.faded img {
-  -webkit-mask-image: linear-gradient(to left, #000 40%, transparent 97%);
-          mask-image: linear-gradient(to left, #000 40%, transparent 97%);
+  -webkit-mask-image: linear-gradient(to left, #000 72%, transparent 100%);
+          mask-image: linear-gradient(to left, #000 72%, transparent 100%);
 }
 
 /* seksie met 'n beeld-ry plus vol-breedte inhoud daaronder */
@@ -1070,8 +1070,8 @@ details p {
 
   .feature-row.media-left .feature-media.faded img,
   .feature-row.media-right .feature-media.faded img {
-    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
-            mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
   }
 
   .gallery-grid {

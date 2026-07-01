@@ -4,6 +4,7 @@
 .DS_Store
 node_modules
 npm-debug.log*
+.claude/settings.local.json
 
 # Full-resolution photo originals — served from Supabase Storage, not the repo
 verlowing/

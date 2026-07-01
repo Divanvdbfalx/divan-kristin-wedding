@@ -3,15 +3,6 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/Photos-3-001/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
       "source": "/(.*).css",
       "headers": [
         {

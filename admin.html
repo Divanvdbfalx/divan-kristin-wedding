@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="af">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RSVP Admin | Divan & Kristin</title>
+    <title>RSVP Administrasie | Divan & Kristin</title>
     <meta name="robots" content="noindex">
     <link rel="icon" href="data:,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260603-2">
+    <link rel="stylesheet" href="styles.css?v=20260604">
   </head>
   <body>
     <header class="site-header">
@@ -21,33 +21,33 @@
 
     <main>
       <section class="section-shell admin-section" aria-labelledby="admin-title">
-        <p class="kicker">Private view</p>
-        <h1 id="admin-title">RSVP Admin</h1>
+        <p class="kicker">Privaat oorsig</p>
+        <h1 id="admin-title">RSVP Administrasie</h1>
 
         <form class="admin-login">
           <label>
-            Admin password
+            Admin wagwoord
             <span class="password-field">
               <input id="admin-password" type="password" name="password" autocomplete="current-password" required>
-              <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle data-target="admin-password">Show</button>
+              <button class="password-toggle" type="button" aria-label="Wys wagwoord" aria-pressed="false" data-password-toggle data-target="admin-password">Wys</button>
             </span>
           </label>
-          <button class="pill-button" type="submit">Load RSVPs</button>
+          <button class="pill-button" type="submit">Laai RSVP's</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
 
         <div class="admin-summary" hidden>
           <article>
             <strong data-summary="total">0</strong>
-            <span>Total replies</span>
+            <span>Totale antwoorde</span>
           </article>
           <article>
             <strong data-summary="attending">0</strong>
-            <span>Attending</span>
+            <span>Bywoon</span>
           </article>
           <article>
             <strong data-summary="declined">0</strong>
-            <span>Declined</span>
+            <span>Bedank</span>
           </article>
         </div>
 
@@ -55,13 +55,13 @@
           <table class="admin-table">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Attendance</th>
-                <th>Meal</th>
-                <th>Contact</th>
-                <th>Dietary</th>
-                <th>Message</th>
+                <th>Datum</th>
+                <th>Naam</th>
+                <th>Bywoning</th>
+                <th>Maaltyd</th>
+                <th>Kontak</th>
+                <th>Dieet</th>
+                <th>Boodskap</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -82,8 +82,8 @@
       passwordToggle.addEventListener("click", () => {
         const isVisible = passwordInput.type === "text";
         passwordInput.type = isVisible ? "password" : "text";
-        passwordToggle.textContent = isVisible ? "Show" : "Hide";
-        passwordToggle.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+        passwordToggle.textContent = isVisible ? "Wys" : "Verberg";
+        passwordToggle.setAttribute("aria-label", isVisible ? "Wys wagwoord" : "Verberg wagwoord");
         passwordToggle.setAttribute("aria-pressed", String(!isVisible));
       });
 
@@ -133,7 +133,7 @@
         const password = new FormData(loginForm).get("password");
         const button = loginForm.querySelector("button");
         button.disabled = true;
-        statusText.textContent = "Loading RSVPs...";
+        statusText.textContent = "RSVP's word gelaai...";
 
         try {
           const response = await fetch("/api/rsvps", {
@@ -144,7 +144,7 @@
           const payload = await response.json();
 
           if (!response.ok) {
-            throw new Error(payload.error || "Could not load RSVPs.");
+            throw new Error(payload.error || "Kon nie RSVP's laai nie.");
           }
 
           setSummary(payload.submissions);
@@ -152,8 +152,8 @@
           summary.hidden = false;
           tableWrap.hidden = false;
           statusText.textContent = payload.submissions.length
-            ? "RSVPs loaded."
-            : "No RSVPs have been submitted yet.";
+            ? "RSVP's gelaai."
+            : "Geen RSVP's is nog ingedien nie.";
         } catch (error) {
           summary.hidden = true;
           tableWrap.hidden = true;

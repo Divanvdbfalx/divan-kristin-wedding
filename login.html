@@ -1,34 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="af">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Enter Password | Divan & Kristin</title>
+    <title>Voer Wagwoord In | Divan & Kristin</title>
     <meta name="robots" content="noindex">
     <link rel="icon" href="data:,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260603-2">
+    <link rel="stylesheet" href="styles.css?v=20260604">
   </head>
   <body class="login-page">
     <main class="login-shell" aria-labelledby="login-title">
       <section class="login-panel">
         <a class="monogram login-monogram" href="/login" aria-label="Divan and Kristin login">D <span>&amp;</span> K</a>
-        <p class="kicker">Private invitation</p>
+        <p class="kicker">Privaat uitnodiging</p>
         <h1 id="login-title">Divan &amp; Kristin</h1>
         <p class="login-date">28 November 2026 | Country Sjiek</p>
 
         <form class="login-form" action="/api/login" method="post">
           <input type="hidden" name="next" value="/">
           <label>
-            Password
+            Wagwoord
             <span class="password-field">
               <input id="main-password" type="password" name="password" autocomplete="current-password" required autofocus>
-              <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle data-target="main-password">Show</button>
+              <button class="password-toggle" type="button" aria-label="Wys wagwoord" aria-pressed="false" data-password-toggle data-target="main-password">Wys</button>
             </span>
           </label>
-          <button class="pill-button" type="submit">Enter Website</button>
+          <button class="pill-button" type="submit">Betree Webtuiste</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
@@ -47,8 +47,8 @@
       passwordToggle.addEventListener("click", () => {
         const isVisible = passwordInput.type === "text";
         passwordInput.type = isVisible ? "password" : "text";
-        passwordToggle.textContent = isVisible ? "Show" : "Hide";
-        passwordToggle.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+        passwordToggle.textContent = isVisible ? "Wys" : "Verberg";
+        passwordToggle.setAttribute("aria-label", isVisible ? "Wys wagwoord" : "Verberg wagwoord");
         passwordToggle.setAttribute("aria-pressed", String(!isVisible));
       });
 
@@ -57,7 +57,7 @@
 
         const button = loginForm.querySelector("button");
         button.disabled = true;
-        statusText.textContent = "Checking password...";
+        statusText.textContent = "Wagwoord word nagegaan...";
 
         try {
           const response = await fetch("/api/login", {
@@ -71,7 +71,7 @@
           const payload = await response.json();
 
           if (!response.ok) {
-            throw new Error(payload.error || "Please try again.");
+            throw new Error(payload.error || "Probeer asseblief weer.");
           }
 
           window.location.assign(payload.redirectTo || "/");

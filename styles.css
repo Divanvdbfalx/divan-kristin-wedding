@@ -609,6 +609,18 @@ h3 {
   }
 }
 
+/* Ons Verhaal-foto is 'n staande portret — wys dit vol, sonder om koppe of voete af te sny */
+#story .feature-media img {
+  aspect-ratio: 2 / 3;
+}
+
+@media (min-width: 1200px) {
+  #story .feature-media img {
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+}
+
 /* vervaag na wit — beeld smelt in die teks-witruimte in */
 .feature-media.faded img {
   border-radius: 0;

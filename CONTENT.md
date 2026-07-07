@@ -13,7 +13,6 @@
 **Kieslys-skakels (regs bo):**
 - Besonderhede
 - Vier saam
-- Die Drag
 - Ons Verhaal
 - Register
 - RSVP
@@ -84,23 +83,15 @@
 **Opskrif:** Gasnotas
 
 ### Kaartjie 1 — Verblyf (🏠)
-@vereiste aanbevelings vir nabygeleë verblyf
+Soek gerus vir verblyf in die omgewing rondom Country Sjiek vir 28 tot 29 November 2026.
+
+- Booking.com: https://www.booking.com/searchresults.html?ss=Wolseley%2C%20Western%20Cape%2C%20South%20Africa&checkin=2026-11-28&checkout=2026-11-29&group_adults=2&no_rooms=1&group_children=0
+- Airbnb: https://www.airbnb.com/s/Country-Sjiek--Wolseley--South-Africa/homes?checkin=2026-11-28&checkout=2026-11-29
+- LekkeSlaap: https://www.lekkeslaap.co.za/accommodation-in/wolseley
 
 ### Kaartjie 2 — Parkering & Toegang (🚗)
-Parkeringsinligting: Volg bordjies vir nodige instruksies @vereiste
-*Klein teks:* Toeganklikheidsnota: Verwag effens rowwe terrein.
-
----
-
-## 5. Die Drag (foto links) — `#look`
-
-**Klein opskrif:** Die drag
-
-**Opskrif:** Wat om aan te trek op ons spesiale dag
-
-**Hoofteks:** Vir ons somertroue, gebruik gerus die volgende kleure as inspirasie vir jou drag.
-
-*(Onder wys 'n rytjie kleurmonsters — die aardse kleurpalet.)*
+Daar sal bordjies uitgesit wees wat julle kan volg om die parkering te vind.
+*Klein teks:* Verwag matige grondpaaie en plaaspaaie na die venue.
 
 ---
 
@@ -118,23 +109,23 @@ Parkeringsinligting: Volg bordjies vir nodige instruksies @vereiste
 
 **Paragraaf 4:** Terwyl ons deur die berge gehardloop en oor die lewe gesels het, het iets eenvoudig en besonders begin. Van daar af het die kuiers sommer vanself gevolg – roomys, koffie, draffies, sokkies en baie lag. Tussen al die gewone oomblikke het 'n mooi vriendskap stilweg in liefde verander.
 
-**Paragraaf 5:** Ná 'n spontane nachos-aand saam met goeie vriende het Divan vir die eerste keer Kristin se hand gevat. (Spesiale Shoutout aan Adriaan en Madelein – die beste wingman en wingwoman!) Kristin se hart het tien bollemakiesies gemaak en sy het soos 'n jong dogtertjie van oor tot oor geglimlag.
+**Paragraaf 5:** Ná 'n spontane nachos-aand saam met goeie vriende het Divan vir die eerste keer Kristin se hand gevat. (Spesiale Shoutout aan Adriaan en Madelein) Kristin se hart het tien bollemakiesies gemaak en sy het soos 'n jong dogtertjie van oor tot oor geglimlag.
 
 **Paragraaf 6:** Nadat die ys gebreek was, het ons stadig maar seker die lewe saam begin aanpak – Wine Runs wat in middernag-uitstappies ontaard het, Rugby Wêreldbeker-kykpartytjies in Dagbreek se quad, eindelose koffiedates en baie nuwe herinneringe. Sonder dat ons dit regtig besef het, het ons lewens en ons vriendekringe begin saamsmelt.
 
-**Paragraaf 7:** Ná 'n baie nat, uitmergelende, maar ongelooflik mooi Tsitsikamma-staptog het Divan vir Kristin op 11 Januarie 2024 op St. Francis se strand gevra om sy meisie te wees. Dit was een van die maklikste "ja's" wat sy nog ooit gesê het. Daardie aand het ons ook vir die eerste keer die L-woord hardop gesê.
+**Paragraaf 7:** Ná 'n baie nat, uitmergelende, maar ongelooflik mooi Tsitsikamma-staptog het Divan vir Kristin op 11 Januarie 2024 op St. Francis se strand gevra om sy meisie te wees. Dit was een van die maklikste "ja's" wat sy nog ooit gesê het.
 
-**Paragraaf 8:** Van daar af het die avontuur behoorlik begin. Saam het ons die Argus op 'n tandem aangepak, berge uitgehardloop en elke mooi sonsakplekkie van Stellenbosch tot in die Kaap gaan soek.
+**Paragraaf 8:** Van daar af het die avonture behoorlik begin, en saam het ons alles aangepak wat in ons bereik was. Van hardloop en staptogte na rotsklim en Six-Pack Dam Dice, van tandemfietsry en tennis tot swem en duik, het ons elke oomblik mekaar se teenwoordigheid geniet en die Here se natuurskoonheid waardeer. En as julle al Kristin se Instagram stories gesien het, dan weet julle ons is professionele sundowners wat elke sonsakplek van Stellenbosch tot in die Kaap aangepak het.
 
 **Paragraaf 9:** Op 5 April 2026 het Divan vir Kristin verras met 'n piekniek langs Clarence Drive. Tussen die brullende see en die berge wat ons omvou het, het hy op een knie afgesak. Om eerlik te wees, onthou Kristin nie eers presies wat gesê is nie. Al wat sy onthou, is dat sy onmiddellik geweet het die antwoord is ja. Omvou in Divan se sterk arms, met trane wat by my wang af loop, en vreugde wat by my hart uit borrel, was dit die begin van verewig.
 
 **Paragraaf 10:** Wanneer ons vandag terugkyk, sien ons hoe God ons paaie lank voor ons dit self kon raaksien, met doel verweef het. Ons is ongelooflik dankbaar dat Hy ons nie net met ons beste maatjie geseën het nie, maar met 'n lewensmaat. Nou kry ons die voorreg om die volgende hoofstuk van ons Godgeskrewe storie saam met elkeen van julle te vier.
 
 ### Strooimeisies
-Kyla, Anel, Melissa, Delia
+Kyla, Anel, Melissa en Delia
 
 ### Strooijonkers
-Matewis, Allax, Daniel, Wilber
+Matthew, Alex, Danie en Wilber
 
 ---
 
@@ -166,8 +157,8 @@ Daar word gesê die geheim tot 'n gelukkige huwelik is goeie kommunikasie… maa
 
 ### Vorm-velde
 - **Naam** — plekhouer: "Jou volle naam"
-- **Sal jy bywoon?** — opsies: Aanvaar met blydskap / Bedank met spyt
-- **Maaltydvoorkeur** — opsies: @vereiste maaltydopsies / Vegetaries / Veganisties
+- **Kan jy bywoon?** — opsies: JAAAAAA / Nee 🥲
+- **Vegetaries?** — keuses: Ek hou van vleis / Vegetaries
 - **Dieetbeperkings** — plekhouer: "Allergieë of dieetnotas"
 - **Kontaknommer of e-pos** — plekhouer: "Telefoon of e-pos"
 - **Boodskap** — plekhouer: "Enigiets anders wat jy wil hê ons moet weet"
@@ -187,7 +178,7 @@ Daar word gesê die geheim tot 'n gelukkige huwelik is goeie kommunikasie… maa
 | Is kinders uitgenooi? | Slegs as hulle by die naam op die uitnodiging genoem word. |
 | Hoe laat moet ek aankom? | Kom asseblief teen 14h30 aan, een uur voor die seremonie. |
 | Word vervoer verskaf? | Nie tensy anders vermeld nie. |
-| Sal daar parkering wees? | @vereiste parkeringsinligting |
+| Sal daar parkering wees? | Daar sal parkering wees op die venue aangedui deur bordjies. |
 | Is die lokasie rolstoeltoeganklik? | @vereiste toeganklikheidsbesonderhede. Verwag effens rowwe terrein rondom dele van die lokasie. |
 | Wat van dieetvereistes? | Sluit asseblief enige allergieë of dieetbeperkings in jou RSVP in. |
 | Kan ek foto's tydens die seremonie neem? | Hou asseblief fone weggebêre tydens die seremonie tensy anders vermeld. |

@@ -6,6 +6,9 @@ const rsvpForm = document.querySelector(".rsvp-form");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = lightbox.querySelector("img");
 const lightboxCaption = lightbox.querySelector("p");
+const meatOption = document.querySelector('[data-confetti="meat"]');
+const vegOption = document.querySelector('[data-confetti="veg"]');
+let lastConfettiLaunch = 0;
 
 const updateCountdown = () => {
   const remaining = Math.max(weddingDate - new Date(), 0);
@@ -39,6 +42,66 @@ menuToggle.addEventListener("click", () => {
 navLinks.forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
+
+const launchButtonBurst = (originElement, options = {}) => {
+  const now = Date.now();
+  if (now - lastConfettiLaunch < 150) {
+    return;
+  }
+
+  lastConfettiLaunch = now;
+  const origin = originElement.nextElementSibling || originElement;
+  const rect = origin.getBoundingClientRect();
+  const layer = document.createElement("div");
+  layer.className = "confetti-layer";
+  layer.setAttribute("aria-hidden", "true");
+
+  const colors = ["#a88962", "#68745e", "#b8916f", "#d6c5a5", "#9a6d4e", "#3f4639"];
+  const count = options.emoji ? 48 : 70;
+
+  for (let index = 0; index < count; index += 1) {
+    const piece = document.createElement("span");
+    piece.style.setProperty("--origin-x", `${rect.left + rect.width / 2}px`);
+    piece.style.setProperty("--origin-y", `${rect.top + rect.height / 2}px`);
+    piece.style.setProperty("--tx", `${Math.random() * 420 - 210}px`);
+    piece.style.setProperty("--rise", `${Math.random() * -260 - 80}px`);
+    piece.style.setProperty("--fall", `${Math.random() * 260 + 250}px`);
+    piece.style.setProperty("--delay", `${Math.random() * 0.08}s`);
+    piece.style.setProperty("--duration", `${1.9 + Math.random() * 0.7}s`);
+    piece.style.setProperty("--spin", `${Math.random() * 900 + 360}deg`);
+
+    if (options.emoji) {
+      piece.className = "emoji-piece";
+      piece.textContent = options.emoji;
+    } else {
+      piece.style.background = colors[index % colors.length];
+    }
+
+    layer.append(piece);
+  }
+
+  document.body.append(layer);
+  window.setTimeout(() => layer.remove(), 3400);
+};
+
+const bindBurstOption = (option, burstOptions) => {
+  option?.closest("label")?.addEventListener("click", () => {
+    window.setTimeout(() => {
+      if (option.checked) {
+        launchButtonBurst(option, burstOptions);
+      }
+    }, 80);
+  });
+
+  option?.addEventListener("change", () => {
+    if (option.checked) {
+      launchButtonBurst(option, burstOptions);
+    }
+  });
+};
+
+bindBurstOption(meatOption);
+bindBurstOption(vegOption, { emoji: "🥦" });
 
 rsvpForm.addEventListener("submit", async (event) => {
   event.preventDefault();

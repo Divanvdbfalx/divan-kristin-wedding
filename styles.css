@@ -27,6 +27,14 @@
   box-sizing: border-box;
 }
 
+a,
+button,
+summary,
+.toggle-buttons span,
+.pill-button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
@@ -954,6 +962,7 @@ fieldset {
 }
 
 .toggle-buttons label {
+  position: relative;
   display: block;
   flex: 1 1 190px;
   color: inherit;
@@ -1318,18 +1327,68 @@ details p {
   cursor: pointer;
 }
 
+.inline-link {
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* Swewende RSVP-knoppie — net op fone, gly weg wanneer die RSVP-afdeling wys */
+.mobile-rsvp-bar {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 60;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--paper);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(36, 32, 27, 0.28);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.mobile-rsvp-bar.is-hidden {
+  opacity: 0;
+  transform: translateY(120%);
+  pointer-events: none;
+}
+
 @media (max-width: 820px) {
   .menu-toggle {
     display: block;
   }
 
+  .mobile-rsvp-bar {
+    display: inline-flex;
+  }
+
   .site-nav {
     position: fixed;
-    inset: 70px 0 0;
+    top: 70px;
+    left: 0;
+    right: 0;
+    /* Die kop se backdrop-filter maak dit die bevattingsblok vir hierdie
+       fixed-kieslys, so dvh (nie bottom:0 nie) verseker volle skermhoogte. */
+    height: calc(100dvh - 70px);
     display: none;
     align-content: start;
     padding: 32px;
-    background: rgba(255, 254, 253, 0.98);
+    overflow-y: auto;
+    background: var(--page);
+  }
+
+  .nav-open .mobile-rsvp-bar {
+    opacity: 0;
+    transform: translateY(120%);
+    pointer-events: none;
   }
 
   .nav-open .site-nav {
@@ -1340,6 +1399,28 @@ details p {
     padding: 16px 0;
     border-bottom: 1px solid var(--line);
     font-size: 0.76rem;
+  }
+
+  /* Hamburger word 'n X wanneer die kieslys oop is */
+  .menu-toggle span {
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+
+  .nav-open .menu-toggle span:first-child {
+    transform: translateY(4.5px) rotate(45deg);
+  }
+
+  .nav-open .menu-toggle span:last-child {
+    transform: translateY(-4.5px) rotate(-45deg);
+  }
+
+  /* Groter, leesbaarder mylpaal-etikette op fone */
+  .story-path .pt-title {
+    font-size: 29px;
+  }
+
+  .story-path .pt-sub {
+    font-size: 17px;
   }
 
   .intro-feature,
@@ -1374,7 +1455,12 @@ details p {
             mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
   }
 
-  .registry .feature-media img {
+  /* Op fone stapel die kolomme, so die beelde keer terug na normale vloei
+     (op rekenaar is hulle absoluut om die teks-kolom se hoogte te vul). */
+  .registry .feature-media img,
+  .rsvp-section .feature-media img {
+    position: static;
+    inset: auto;
     height: auto;
     min-height: 0;
     aspect-ratio: 4 / 5;
@@ -1415,6 +1501,13 @@ details p {
 @media (max-width: 520px) {
   body {
     font-size: 14px;
+  }
+
+  /* 16px keer dat iOS in-zoem wanneer 'n veld gefokus word */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 
   .section-shell,

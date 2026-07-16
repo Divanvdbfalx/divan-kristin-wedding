@@ -167,6 +167,32 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+// Versteek die swewende RSVP-knoppie sodra die RSVP-afdeling of voetskrif wys
+const mobileRsvpBar = document.querySelector(".mobile-rsvp-bar");
+const rsvpSection = document.querySelector("#rsvp");
+
+if (mobileRsvpBar && rsvpSection && "IntersectionObserver" in window) {
+  const footer = document.querySelector(".site-footer");
+  const hideTargets = [rsvpSection, footer].filter(Boolean);
+  const visible = new Set();
+
+  const barObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          visible.add(entry.target);
+        } else {
+          visible.delete(entry.target);
+        }
+      });
+      mobileRsvpBar.classList.toggle("is-hidden", visible.size > 0);
+    },
+    { rootMargin: "0px 0px -25% 0px" }
+  );
+
+  hideTargets.forEach((target) => barObserver.observe(target));
+}
+
 if (window.lucide) {
   window.lucide.createIcons();
 }

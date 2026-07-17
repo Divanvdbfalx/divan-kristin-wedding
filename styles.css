@@ -57,10 +57,15 @@ body.nav-open {
 body.login-page {
   min-height: 100vh;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(255, 254, 253, 0.94), rgba(251, 250, 248, 0.86)),
-    radial-gradient(circle at top left, rgba(168, 137, 98, 0.18), transparent 34%),
-    linear-gradient(160deg, rgba(104, 116, 94, 0.16), rgba(223, 211, 194, 0.24));
+  /* Verlowingsfoto agter die wagwoordpaneel. Die sluier hou die wit paneel
+     leesbaar oor die helder strandsand. */
+  background-color: var(--page);
+  background-image:
+    linear-gradient(rgba(33, 31, 25, 0.3), rgba(33, 31, 25, 0.22)),
+    url("https://umawabolgtvvczzsjwns.supabase.co/storage/v1/object/public/photos/login-page.jpg?v=20260717");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 img,
@@ -163,6 +168,16 @@ h3 {
   display: grid;
   place-items: center;
   padding: 28px;
+}
+
+/* Die paar staan regs in die foto, met oop strand links. Skuif die paneel
+   daarheen sodat dit in die leë sand sit eerder as oor Divan en Kristin.
+   Op fone is daar nie ruimte langsaan nie, so bly dit gesentreer. */
+@media (min-width: 900px) {
+  .login-shell {
+    justify-items: start;
+    padding-left: clamp(40px, 7vw, 110px);
+  }
 }
 
 .login-panel {

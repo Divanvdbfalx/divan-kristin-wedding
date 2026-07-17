@@ -4,8 +4,8 @@
     {
       "name": "wedding-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4180"],
-      "port": 4180
+      "runtimeArgs": ["-m", "http.server", "4181"],
+      "port": 4181
     }
   ]
 }

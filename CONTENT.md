@@ -61,7 +61,7 @@
 
 ### Kaartjie 2 — Plek (📍)
 - Country Sjiek
-- Upper Breede Riviera, Wolsely, Suid-Afrika, 6830
+- Upper Breede Rivier, Wolsely, Suid-Afrika, 6830
 - *Skakel:* Maak Google Maps oop
 
 ### Kaartjie 3 — Drag-kode (👕)

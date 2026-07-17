@@ -158,11 +158,41 @@ lightbox.addEventListener("click", (event) => {
   }
 });
 
+const stayModal = document.querySelector(".stay-modal");
+const stayTrigger = document.querySelector("[data-open-stay]");
+
+const closeStayModal = () => {
+  stayModal.hidden = true;
+  document.body.classList.remove("nav-open");
+  stayTrigger.focus();
+};
+
+if (stayModal && stayTrigger) {
+  stayTrigger.addEventListener("click", () => {
+    stayModal.hidden = false;
+    // hergebruik nav-open sodat die bladsy agter die venster nie saamskuif nie
+    document.body.classList.add("nav-open");
+    stayModal.querySelector(".stay-close").focus();
+    stayModal.querySelector(".stay-body").scrollTop = 0;
+  });
+
+  stayModal.querySelector(".stay-close").addEventListener("click", closeStayModal);
+
+  stayModal.addEventListener("click", (event) => {
+    if (event.target === stayModal) {
+      closeStayModal();
+    }
+  });
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
     if (!lightbox.hidden) {
       closeLightbox();
+    }
+    if (stayModal && !stayModal.hidden) {
+      closeStayModal();
     }
   }
 });

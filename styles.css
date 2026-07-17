@@ -782,9 +782,14 @@ h3 {
   }
 
   /* Keer dat 'n portret hoër as die venster word — anders kan jy nooit
-     die onderkant sien terwyl dit vasgeplak is nie. */
+     die onderkant sien terwyl dit vasgeplak is nie. Die breedte krimp saam
+     sodat die 2:3-verhouding behoue bly en niks afgesny word nie. */
   #story .feature-media img {
-    max-height: calc(100vh - 124px);
+    width: min(100%, calc((100vh - 124px) * 2 / 3));
+    height: auto;
+    max-height: none;
+    aspect-ratio: 2 / 3;
+    margin-inline: auto;
   }
 }
 

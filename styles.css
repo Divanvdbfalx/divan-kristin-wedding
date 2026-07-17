@@ -56,7 +56,10 @@ body.nav-open {
 
 body.login-page {
   min-height: 100vh;
-  overflow: hidden;
+  /* Slegs horisontaal vasgesit. 'overflow: hidden' het die paneel op kort
+     skerms (bv. 'n foon in landskap) afgesny, met die wagwoordveld heeltemal
+     onbereikbaar. */
+  overflow-x: hidden;
   /* Verlowingsfoto agter die wagwoordpaneel. Die sluier hou die wit paneel
      leesbaar oor die helder strandsand. */
   background-color: var(--page);

@@ -65,7 +65,7 @@ body.login-page {
   background-color: var(--page);
   background-image:
     linear-gradient(rgba(33, 31, 25, 0.3), rgba(33, 31, 25, 0.22)),
-    url("https://umawabolgtvvczzsjwns.supabase.co/storage/v1/object/public/photos/login-page.jpg?v=20260717");
+    url("/photos/login-page.jpg?v=20260717");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

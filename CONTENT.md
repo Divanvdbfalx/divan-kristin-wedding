@@ -66,7 +66,7 @@
 
 ### Kaartjie 3 — Drag-kode (👕)
 - Formeel
-- *Klein teks:* Dames: Lang rokke of broekpak. Mans: Das of strikdas met 'n baadjie.
+- *Klein teks:* Dis seker nie nodig om te noem nie, maar geen wit asseblief
 
 ### Kaartjie 4 — Onthaal (🍽️)
 - Eet, dans & feesviering

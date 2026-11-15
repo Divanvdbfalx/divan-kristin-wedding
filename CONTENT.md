@@ -15,7 +15,6 @@
 - Vier saam
 - Ons Verhaal
 - Register
-- RSVP
 - Vrae
 
 ---
@@ -29,8 +28,6 @@
 **Datum-reël:** 28 November 2026 | Country Sjiek
 
 **Aftel-blokkie:** Dae · Ure · Min · Sek *(werk outomaties)*
-
-**Knoppie:** RSVP
 
 ---
 
@@ -147,25 +144,6 @@ Daar word gesê die geheim tot 'n gelukkige huwelik is goeie kommunikasie… maa
 
 ---
 
-## 8. RSVP (foto regs) — `#rsvp`
-
-**Klein opskrif:** Antwoord asseblief teen 1 Julie 2026
-
-**Opskrif:** RSVP
-
-**Hoofteks:** Laat weet ons asseblief teen 1 Julie 2026 of jy by ons spesiale dag kan wees.
-
-### Vorm-velde
-- **Naam** — plekhouer: "Jou volle naam"
-- **Kan jy bywoon?** — opsies: JAAAAAA / Nee 🥲
-- **Vegetaries?** — keuses: Ek hou van vleis / Vegetaries
-- **Dieetbeperkings** — plekhouer: "Allergieë of dieetnotas"
-- **Kontaknommer of e-pos** — plekhouer: "Telefoon of e-pos"
-- **Boodskap** — plekhouer: "Enigiets anders wat jy wil hê ons moet weet"
-- **Knoppie:** Stuur RSVP
-
----
-
 ## 9. Vrae & Antwoorde — `#faq`
 
 **Klein opskrif:** Goed om te weet
@@ -180,7 +158,7 @@ Daar word gesê die geheim tot 'n gelukkige huwelik is goeie kommunikasie… maa
 | Word vervoer verskaf? | Nie tensy anders vermeld nie. |
 | Sal daar parkering wees? | Daar sal parkering wees op die venue aangedui deur bordjies. |
 | Is die lokasie rolstoeltoeganklik? | @vereiste toeganklikheidsbesonderhede. Verwag effens rowwe terrein rondom dele van die lokasie. |
-| Wat van dieetvereistes? | Sluit asseblief enige allergieë of dieetbeperkings in jou RSVP in. |
+| Wat van dieetvereistes? | Laat weet asseblief vir Kristin of Divan van enige allergieë of dieetbeperkings. |
 | Kan ek foto's tydens die seremonie neem? | Hou asseblief fone weggebêre tydens die seremonie tensy anders vermeld. |
 | Met wie kan ek kontak maak met vrae? | Troue-organiseerder: Renée van Zyl — 082 781 0813. WhatsApp-groep: volg binnekort. |
 

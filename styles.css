@@ -54,23 +54,6 @@ body.nav-open {
   overflow: hidden;
 }
 
-body.login-page {
-  min-height: 100vh;
-  /* Slegs horisontaal vasgesit. 'overflow: hidden' het die paneel op kort
-     skerms (bv. 'n foon in landskap) afgesny, met die wagwoordveld heeltemal
-     onbereikbaar. */
-  overflow-x: hidden;
-  /* Verlowingsfoto agter die wagwoordpaneel. Die sluier hou die wit paneel
-     leesbaar oor die helder strandsand. */
-  background-color: var(--page);
-  background-image:
-    linear-gradient(rgba(33, 31, 25, 0.3), rgba(33, 31, 25, 0.22)),
-    url("/photos/login-page.jpg?v=20260717");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 img,
 iframe {
   display: block;
@@ -164,65 +147,6 @@ h3 {
   height: 2px;
   margin: 7px 0;
   background: var(--ink);
-}
-
-.login-shell {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 28px;
-}
-
-/* Die paar staan regs in die foto, met oop strand links. Skuif die paneel
-   daarheen sodat dit in die leë sand sit eerder as oor Divan en Kristin.
-   Op fone is daar nie ruimte langsaan nie, so bly dit gesentreer. */
-@media (min-width: 900px) {
-  .login-shell {
-    justify-items: start;
-    padding-left: clamp(40px, 7vw, 110px);
-  }
-}
-
-.login-panel {
-  width: min(560px, 100%);
-  padding: clamp(34px, 7vw, 58px);
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(47, 45, 41, 0.12);
-  border-radius: 8px;
-  box-shadow: 0 26px 64px rgba(36, 32, 27, 0.11);
-  text-align: center;
-  backdrop-filter: blur(18px);
-}
-
-.login-monogram {
-  display: inline-block;
-  margin-bottom: 34px;
-}
-
-.login-panel h1 {
-  margin-bottom: 20px;
-  font-size: clamp(4rem, 11vw, 6.6rem);
-}
-
-.login-date {
-  margin-bottom: 34px;
-  color: var(--muted);
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  line-height: 1.8;
-  text-transform: uppercase;
-}
-
-.login-form {
-  display: grid;
-  gap: 16px;
-  text-align: left;
-}
-
-.login-form .pill-button {
-  width: fit-content;
-  margin: 8px auto 0;
 }
 
 .section-shell {
@@ -1885,28 +1809,6 @@ details p {
   }
 
   .admin-login .pill-button {
-    width: 100%;
-  }
-
-  body.login-page {
-    overflow: auto;
-  }
-
-  .login-shell {
-    align-items: start;
-    padding: 18px;
-  }
-
-  .login-panel {
-    padding: 32px 22px;
-  }
-
-  .login-date {
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
-  }
-
-  .login-form .pill-button {
     width: 100%;
   }
 }
